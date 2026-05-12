@@ -1,7 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="api-dump.css">
-</head>
+    <meta charset="UTF-8">
+    <title>rblx api</title>
+    <style>
+        body {
+            background-color: #151515;
+            color: white;
+            font-family: Consolas, "Courier New", monospace;
+            white-space: nowrap;
+            padding: 10px;
+        }
+        .Class, .Property, .Function, .Event, .Callback {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 20px;
+        }
+        .boolean,
+        span.TagChange,
+        span[class^="DescriptorType"],
+        span[class^="DiffType"] {
+            font-weight: bold;
+        }
+        .boolean,
+        .DescriptorType.Enum,
+        .DescriptorType.Class,
+        .DescriptorType.EnumItem {
+            color: #FF6400;
+        }
+        .DescriptorType.Property { color: #00FFFF; }
+        .DescriptorType.Function { color: #00FF00; }
+        .DescriptorType.Event { color: #F5CD30; }
+        .DescriptorType.Callback { color: #FF00FF; }
+        .symbol, .Symbol {
+            color: #FFAA50;
+            font-weight: normal;
+        }
+        span.Tag {
+            background-color: #56562C;
+            color: #F3F385 !important;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 0 4px;
+            margin: 0 2px;
+        }
+        .ThreadSafety {
+            background-color: #001F3F;
+            color: #007FFF !important;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 0 4px;
+        }
+        span.Type {
+            color: #FF6400;
+            font-weight: bold;
+        }
+        .child { margin-left: 40px; }
+        .deprecated *, .deprecated {
+            font-style: italic;
+            text-decoration: line-through;
+            color: #8f8f6f !important;
+            opacity: 0.7;
+        }
+        .dim { opacity: 0.5; }
+        .Name { color: #ffffff; }
+        .ClassName { color: #ffffff; }
+        .ParamName { color: #cccccc; }
 
+    </style>
+</head>
+<body>
+<div class="Class">
+    <span class="DescriptorType Class">Class</span><span class="symbol"> </span><span class="Name">Object</span><span class="symbol"> : </span><span class="Superclass">&lt;&lt;&lt;ROOT&gt;&gt;&gt;</span><span class="symbol"> </span><span class="symbol"> </span><span class="Tag">[🏷️NotCreatable]</span><span class="symbol"> </span><span class="Tag">[🏷️NotReplicated]</span>
+</div>
+<div class="Property child">
+    <span class="DescriptorType Property">Property</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">.</span><span class="Name">ClassName</span><span class="symbol">: </span><span class="Type">string</span><span class="symbol"> </span><span class="Tag">[🏷️ReadOnly]</span>
+</div>
+<div class="Property deprecated child dim">
+    <span class="DescriptorType Property">Property</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">.</span><span class="Name">className</span><span class="symbol">: </span><span class="Type">string</span><span class="symbol"> </span><span class="Tag">[🏷️Deprecated]</span><span class="symbol"> </span><span class="Tag">[🏷️ReadOnly]</span>
+</div>
+<div class="Function child">
+    <span class="DescriptorType Function">Function</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">:</span><span class="Name">GetPropertyChangedSignal</span><span class="Parameters"><span class="symbol">(</span><span class="Parameter"><span class="ParamName">property</span><span class="symbol">: </span><span class="Type">string</span></span><span class="symbol">)</span></span><span class="symbol"> -&gt; </span><span class="Type">RBXScriptSignal</span>
+</div>
+<div class="Function child">
+    <span class="DescriptorType Function">Function</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">:</span><span class="Name">IsA</span><span class="Parameters"><span class="symbol">(</span><span class="Parameter"><span class="ParamName">className</span><span class="symbol">: </span><span class="Type">string</span></span><span class="symbol">)</span></span><span class="symbol"> -&gt; </span><span class="Type">boolean</span><span class="symbol"> </span><span class="Tag">[🏷️CustomLuaState]</span><span class="symbol"> </span><span class="ThreadSafety">{🧬Safe}</span>
+</div>
 <div class="Class"><span class="DescriptorType Class">Class</span><span class="symbol"> </span><span class="Name">Object</span><span class="symbol"> : </span><span class="Superclass">&lt;&lt;&lt;ROOT&gt;&gt;&gt;</span><span class="symbol"> </span><span class="symbol"> </span><span class="Tag">[🏷️NotCreatable]</span><span class="symbol"> </span><span class="Tag">[🏷️NotReplicated]</span></div>
 <div class="Property child"><span class="DescriptorType Property">Property</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">.</span><span class="Name">ClassName</span><span class="symbol">: </span><span class="Type">string</span><span class="symbol"> </span><span class="symbol"> </span><span class="symbol"> </span><span class="symbol"> </span><span class="Tag">[🏷️ReadOnly]</span><span class="symbol"> </span></div>
 <div class="Property deprecated child dim"><span class="DescriptorType Property">Property</span><span class="symbol"> </span><span class="ClassName">Object</span><span class="symbol">.</span><span class="Name">className</span><span class="symbol">: </span><span class="Type">string</span><span class="symbol"> </span><span class="symbol"> </span><span class="symbol"> </span><span class="symbol"> </span><span class="Tag">[🏷️Deprecated]</span><span class="symbol"> </span><span class="Tag">[🏷️ReadOnly]</span><span class="symbol"> </span></div>
@@ -12749,3 +12831,5 @@
 <div class="Enum"><span class="DescriptorType Enum">Enum</span><span class="symbol"> </span><span class="Name">ZIndexBehavior</span><span class="symbol"> </span></div>
 <div class="EnumItem child"><span class="DescriptorType EnumItem">EnumItem</span><span class="symbol"> </span><span class="EnumName">ZIndexBehavior</span><span class="symbol">.</span><span class="Name">Global</span><span class="symbol"> : </span><span class="Value">0</span><span class="symbol"> </span></div>
 <div class="EnumItem child"><span class="DescriptorType EnumItem">EnumItem</span><span class="symbol"> </span><span class="EnumName">ZIndexBehavior</span><span class="symbol">.</span><span class="Name">Sibling</span><span class="symbol"> : </span><span class="Value">1</span><span class="symbol"> </span></div>
+</body>
+</html>
